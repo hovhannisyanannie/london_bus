@@ -323,6 +323,7 @@ header {
   margin-top: 19px;
 }
 header .header__container {
+  gap: 15px;
   border-radius: 100px;
   background-color: #393D72;
   backdrop-filter: blur(30px);
@@ -391,6 +392,7 @@ header .header__container__burger {
   right: 0;
   bottom: 0;
   height: 100%;
+  overflow-x: hidden !important;
 }
 @media (max-width: 576px) {
   .footer__images {
@@ -462,6 +464,9 @@ header .header__container__burger {
   padding: 16px 50px;
 }
 
+main {
+  overflow-x: hidden;
+}
 @media (max-width: 992px) {
   main .intro__container__heading {
     flex: 0 0 60%;
@@ -544,12 +549,22 @@ main .about__content {
     text-align: center;
   }
 }
+@media (max-width: 992px) {
+  main .about__content {
+    gap: 30px;
+  }
+}
 main .about__content__text p + p {
   margin-top: 12px;
 }
 main .learning__items {
   flex-wrap: wrap;
   margin-top: 70px;
+}
+@media (max-width: 992px) {
+  main .learning__items {
+    margin-top: 30px;
+  }
 }
 main .learning__items .learning__item {
   padding: 25px 25px 0 25px;
@@ -687,6 +702,7 @@ main .children {
 @media (max-width: 576px) {
   main .children {
     height: 35vh;
+    overflow-x: hidden !important;
   }
 }
 main .children__images {
@@ -831,6 +847,7 @@ main .gallery__inner .grid-item:nth-child(2)::after, main .gallery__inner .grid-
   pointer-events: none;
 }
 main .testimonials {
+  overflow-x: hidden !important;
   margin-top: 120px;
 }
 @media (max-width: 992px) {
@@ -916,6 +933,9 @@ main .testimonials__bg {
   height: 200px;
   background-size: cover;
   margin-top: 100px;
+}
+main .routine {
+  overflow-x: hidden !important;
 }
 main .routine__heading h2 {
   margin: 60px 0;

@@ -3,6 +3,7 @@
 header{
     margin-top: 19px;
     .header__container{
+    gap:15px;
     border-radius: 100px;
     background-color: vars.$primary;
     backdrop-filter: blur(30px);
