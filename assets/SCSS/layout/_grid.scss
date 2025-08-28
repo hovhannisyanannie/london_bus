@@ -1,0 +1,93 @@
+@use "./../utils/extends";
+
+
+.flex-center {
+  @extend %flex-center;
+}
+
+.flex-base { 
+  @extend %flex-base; 
+}
+
+.flex-col {
+  @extend %flex-col;
+}
+
+.flex-center-col{
+  @extend .flex-center-col;
+}
+
+.flex-between { 
+  @extend %flex-between; 
+}
+
+.flex-align { 
+  @extend %flex-align; 
+}
+
+.flex-center-col { 
+  @extend %flex-center-col; 
+}
+
+.flex-around { 
+  @extend %flex-around; 
+}
+
+.flex-center-end { 
+  @extend %flex-center-end; 
+}
+
+.flex-end { 
+  @extend %flex-end; 
+}
+
+.flex-start { 
+  @extend %flex-start; 
+}
+
+.flex-wrap { 
+  @extend %flex-wrap; 
+}
+
+.flex-bet-wrap{
+  @extend %flex-bet-wrap;
+}
+
+.grid-col{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap:15px;
+}
+
+.group-col {
+  flex: 0 0 24%; 
+}
+.w-25{
+  flex:0 0 25%;
+}
+.w-37{
+    flex:0 0 37%;
+}
+.w-41{
+  flex:0 0 41%;
+}
+.w-43 { 
+  flex:0 0 43%
+}
+.w-49 { 
+  width: 49%;
+  max-width: 49%;
+}
+.w-53 { 
+ flex:0 0 53%;
+}
+.w-65 {
+  flex:0 0 65%;
+}
+.w-100 {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+

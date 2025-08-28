@@ -1,0 +1,51 @@
+
+@use 'sass:map';
+
+$font-primary: 'Noto Sans Armenian', sans-serif;
+
+$font-sizes: (
+  '15': 15px,
+  '16': 16px,
+  '17': 17px,
+  '18': 18px,
+  '19': 19px,
+  '20': 20px,
+  '22': 22px,
+  '35': 35px,
+  '50': 50px,
+  '60': 60px,
+  '75': 75px
+);
+
+$white: #ffffff;
+$black: #000000;
+$primary: #393D72; 
+$secondary: #FFD600; 
+$gray-500: #828181;
+$blue-900: #0B1D37;
+$pink:#FF4880;
+$red-500: #FF4646;
+$blue-600: #1877F2;
+$yellow-400:#FFAD00;
+
+$light-pink: #FFA7E5;
+$light-red: #FDD5D5;
+$cream: #FFEFCE;
+$light-blue: #5CCCEF;
+
+$icon-colors: $light-pink, $light-red, $cream, $light-blue;
+$testimonial-colors: (#FA496E, #FEB857, #874BFF, #00C70D);
+
+$breakpoints: (
+  "xs": 576px,
+  "sm": 768px,
+  "md": 992px,
+  "lg": 1200px,
+  "xl": 1440px,
+);
+
+@mixin media($breakpoint) {
+  @media (max-width: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}

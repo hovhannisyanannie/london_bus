@@ -1,0 +1,16 @@
+@use "./../base/variables" as vars;
+@use "./../utils/mixins" as mixins;
+
+@mixin button($display, $color, $background-color,$border-radius, $white-space){
+    display: $display;
+    color: $color;
+    background-color: $background-color;
+    border-radius: $border-radius;
+    white-space: $white-space;
+    cursor: pointer;
+}
+
+.btn{
+    @include button(inline-block, vars.$white, vars.$primary, 100px, nowrap);
+    @include mixins.padding(16px,50px);   
+}

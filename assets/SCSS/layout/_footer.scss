@@ -1,0 +1,65 @@
+@use "./../base/variables" as vars;
+
+.footer{
+        background: #3A3D72 url("./../images/footer-bg.png") no-repeat center center;
+        width: 100%;
+        background-size: cover;
+        &__images{
+        position: absolute;
+        top:0;
+        left:0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        @include vars.media("xs"){
+            display: none;
+        }    
+        img {
+        position: absolute;
+        opacity: 0.5;
+        &:nth-child(1) { top: 10%; left: 10%; }
+        &:nth-child(2) { bottom: 5%; right: 1%; }
+        &:nth-child(3) { bottom: 5%; left: 10%; }
+    }
+}
+    &__inner{
+        padding:70px 0;
+        position: relative;
+        z-index: 2;
+        address{
+                font-style: normal;
+        }
+        .social__icons{
+            >div{
+                gap:8px;
+            }
+            a {
+            display: inline-flex;      
+            justify-content: center;
+            align-items: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 100px;
+            cursor: pointer;
+            }
+            a:nth-child(1) {
+            background:vars.$blue-600;
+            }
+            a:nth-child(2) {
+            background: vars.$yellow-400;
+            }
+            a:nth-child(3) {
+            background: vars.$pink;
+            }
+            a:nth-child(4) {
+            background:vars.$red-500;
+            } 
+            img{
+                pointer-events: none; 
+            }
+        }
+    }
+        &__social{
+            gap:20px;
+        }
+}

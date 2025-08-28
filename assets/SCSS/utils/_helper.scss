@@ -1,0 +1,27 @@
+@use "./extends";
+@use 'mixins' as *;
+
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.center {
+  text-align: center;
+}
+
+.padding-col {
+  @include padding(16px, 16px);
+}

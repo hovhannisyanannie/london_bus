@@ -1,0 +1,51 @@
+@use './../base/variables' as vars;
+
+
+@mixin text-face(
+  $size,                
+  $weight: 400,
+  $line-height: 1.5,
+  $spacing: 0,
+  $color: #000,
+  $align: left,
+  $transform: none,
+  $fluid: false,
+  $min-size: null,
+  $max-size: null,
+  $min-line-height: null,
+  $max-line-height: null
+) {
+  @if $fluid {
+    $min: if($min-size, $min-size, $size * 0.8);
+    $max: if($max-size, $max-size, $size * 1.2);
+    font-size: clamp(#{$min}px, #{$size / 10}vw, #{$max}px);
+
+    $min-lh: if($min-line-height, $min-line-height, $line-height * 0.9);
+    $max-lh: if($max-line-height, $max-line-height, $line-height * 1.1);
+    line-height: clamp(#{$min-lh}px, #{$line-height / 10}vw, #{$max-lh}px);
+  } @else {
+    font-size: #{$size}px;
+    line-height: $line-height; 
+  }
+
+  font-weight: $weight;
+  letter-spacing: $spacing;
+  color: $color;
+  text-align: $align;
+  text-transform: $transform;
+  font-family: vars.$font-primary;
+}
+
+@mixin beforeAfter($content, $position, $top, $left, $width, $height, $border-radius, $border) {
+  content: $content;
+  position: $position;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+  border: $border;
+}
+@mixin padding($vertical, $horizontal) {
+  padding: $vertical $horizontal;
+}

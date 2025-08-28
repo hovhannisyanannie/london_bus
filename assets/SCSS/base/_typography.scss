@@ -1,0 +1,19 @@
+@use './../base/variables' as vars;
+@use './../utils/mixins' as mix;
+@use './fonts';
+
+.text-xs     { @include mix.text-face(15, 400, 20, 0, vars.$white, null, null, true, 12, 15, 16, 20); }
+.text-base   { @include mix.text-face(16, 400, 35, 0, vars.$white, center, null, true, 14, 16, 24, 35); }
+.text-sm     { @include mix.text-face(17, 400, 26, 0, vars.$gray-500, null, null, true, 14, 17, 20, 26); }
+.text-lg     { @include mix.text-face(18, 700, 24, 0, vars.$primary, center, null, true, 16, 18, 20, 24); }
+.text-lg-faq { @include mix.text-face(18, 400, 30, 0, vars.$blue-900, null, null, true, 16, 18, 20, 30); }
+.text-xl     { @include mix.text-face(19, 400, 20, 0, vars.$white, null, uppercase, true, 16, 19, 18, 20); }
+.text-2xl    { @include mix.text-face(20, 600, 48, 0, vars.$white, center, null, true, 18, 20, 42, 48); }
+.text-3xl    { @include mix.text-face(22, 700, 34, 0, vars.$primary, null, null, true, 20, 22, 28, 34); }
+.text-4xl    { @include mix.text-face(35, 700, 48, 0, vars.$primary, center, null, true, 28, 35, 38, 48); }
+.text-5xl    { @include mix.text-face(50, 700, 70, 0, vars.$pink, right, null, true, 26, 50, 40, 70); }
+.text-6xl    { @include mix.text-face(60, 700, 77, 0, vars.$primary, null, null, true, 30, 60, 40, 77); }
+.text-7xl    { @include mix.text-face(75, 700, 48, 0, vars.$primary, null, uppercase, true, 50, 75, 40, 48); }
+
+
+
